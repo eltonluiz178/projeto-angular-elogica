@@ -1,0 +1,17 @@
+@if(control.errors && control.touched){
+    @if(control.errors['required']) {
+        <div class="mensagem-erro text-danger">
+            Campo obrigatório
+        </div>
+    }
+    @else if(control.errors['telefoneInvalido']){
+        <div class="mensagem-erro text-danger">
+            Número de telefone inválido. Use o formato (XX) XXXXX-XXXX
+        </div>
+    }
+    @if(control.errors['email']){
+        <div class="mensagem-erro text-danger">
+            Formato do e-mail inválido
+        </div>
+    }
+}
