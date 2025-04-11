@@ -14,4 +14,9 @@
             Formato do e-mail inválido
         </div>
     }
+    @if(control.errors['dataFatura']){
+        <div class="mensagem-erro text-danger">
+            A data não pode ser superior ao dia atual!
+        </div>
+    }
 }

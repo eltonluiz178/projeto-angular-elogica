@@ -22,3 +22,15 @@ export function validarTelefone(): ValidatorFn {
     return valido ? null : { telefoneInvalido: { value: control.value } };
   };
 }
+
+export function verificaData(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const hoje = new Date();
+    const valor = new Date(control.value);
+
+    hoje.setHours(0, 0, 0, 0);
+    valor.setHours(0, 0, 0, 0);
+
+    return valor > hoje ? { dataFutura: true } : null;
+  }
+}
