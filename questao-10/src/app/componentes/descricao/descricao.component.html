@@ -1,0 +1,10 @@
+<div>
+    @for (usuario of usuarios; track $index) {
+        @if (usuario.situacao == "ativo") {
+            <p> O usuario {{ usuario.nome }} está <span class="text-primary">{{usuario.situacao}}</span></p>
+        }
+        @else if (usuario.situacao == "inativo") {
+            <p> O usuario {{ usuario.nome }} está <span class="text-danger">{{usuario.situacao}}</span></p>
+        }
+    }
+</div>
