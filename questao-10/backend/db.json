@@ -1,0 +1,16 @@
+{
+    "usuarios":[
+        {
+        "nome": "Elton",
+        "situacao": "ativo"
+        },
+        {
+        "nome": "Thiago",
+        "situacao": "ativo"
+        },
+        {
+        "nome": "Fernando",
+        "situacao": "inativo"
+        }
+    ]
+}
