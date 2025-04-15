@@ -1,10 +1,42 @@
-<div>
+<div class="d-flex justify-content-center align-items-center my-5">
+    <table class="table w-50 table-light table-bordered">
+        <thead>
+          <tr>
+            <th class="w-50" scope="col">Usuário</th>
+            <th scope="col">Situação</th>
+          </tr>
+        </thead>
+        <tbody>
     @for (usuario of usuarios; track $index) {
         @if (usuario.situacao == "ativo") {
-            <p> O usuario {{ usuario.nome }} está <span class="text-primary">{{usuario.situacao}}</span></p>
+            <tr>
+                <td>
+                    <div class="alert alert-primary" role="alert">
+                        {{ usuario.nome }}
+                    </div>
+                </td>
+                <td>
+                    <div class="alert alert-primary" role="alert">
+                    {{usuario.situacao}}
+                    </div>
+                </td>
+            </tr>
         }
         @else if (usuario.situacao == "inativo") {
-            <p> O usuario {{ usuario.nome }} está <span class="text-danger">{{usuario.situacao}}</span></p>
+            <tr>
+                <td>
+                    <div class="alert alert-danger" role="alert">
+                        {{ usuario.nome }}
+                    </div>
+                </td>
+                <td>
+                    <div class="alert alert-danger" role="alert">
+                    {{usuario.situacao}}
+                    </div>
+                </td>
+            </tr>
         }
     }
+</tbody>
+</table>
 </div>
