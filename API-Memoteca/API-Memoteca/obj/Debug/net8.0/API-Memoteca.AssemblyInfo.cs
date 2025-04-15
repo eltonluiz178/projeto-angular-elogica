@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API-Memoteca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d32894b286b3275b0e26d7c2eff89d0ccb73999e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+458390c0d5ad388cd327c9597b7ff5b26ce0bc72")]
 [assembly: System.Reflection.AssemblyProductAttribute("API-Memoteca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API-Memoteca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
