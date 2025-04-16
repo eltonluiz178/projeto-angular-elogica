@@ -22,27 +22,27 @@
               <input type="radio" class="form-check-input" id="modelo1">
               <span class="form-check-label mx-2" for="modelo1">Modelo 1</span>
             </div>
-            <app-card-previa [modelo]="1" ></app-card-previa>
+            <app-card-previa [telaMural]="false" [modelo]="1" ></app-card-previa>
           </div>
           <div>
             <div class="mb-5">
               <input type="radio" class="form-check-input" id="modelo2">
               <span class="form-check-label mx-2" for="modelo2">Modelo 2</span>
             </div>
-            <app-card-previa [modelo]="2"></app-card-previa>
+            <app-card-previa [telaMural]="false" [modelo]="2"></app-card-previa>
           </div>
           <div>
             <div class="mb-5">
               <input type="radio" class="form-check-input" id="modelo3">
               <span class="form-check-label mx-2" for="modelo3">Modelo 3</span>
             </div>
-            <app-card-previa [modelo]="3"></app-card-previa>
+            <app-card-previa [telaMural]="false" [modelo]="3"></app-card-previa>
           </div>
         </div>
       </div>
       <div class="d-flex justify-content-center gap-5 mt-5">
-        <button type="submit" class="btn btn-primary rouded w-25">Salvar</button>
-        <button type="submit" class="btn btn-primary rounded w-25">Cancelar</button>
+        <button type="submit" class="btn rouded w-25" style="background-color: #154580; color: white;">Salvar</button>
+        <button type="submit" class="btn rounded w-25" style="background-color: #154580; color: white;">Cancelar</button>
       </div>
     </form>
   </div>
