@@ -32,11 +32,11 @@ public class PensamentoController : ControllerBase
         try
         {
             var colaboradores = await _service.BuscarPensamentoPaginadoASync(pagina, quantidade);
-            return Ok(colaboradores);
+            return StatusCode(200, colaboradores);
         }
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return StatusCode(404, e.Message);
         }
     }
 
@@ -46,9 +46,12 @@ public class PensamentoController : ControllerBase
         try
         {
             var pensamentos = await _service.BuscarTodosPensamentosASync();
-            return Ok(pensamentos);
+            return StatusCode(200, pensamentos);
         }
-        catch (Exception e) { return BadRequest(e.Message); }
+        catch (Exception e) 
+        { 
+            return StatusCode(404, e.Message);
+        }
     }
 
     [HttpGet("{id}")]
@@ -56,10 +59,13 @@ public class PensamentoController : ControllerBase
     {
         try
         {
-            var pensamentos = await _service.BuscarPensamentoPorIdASync(id);
-            return Ok(pensamentos);
+            var pensamento = await _service.BuscarPensamentoPorIdASync(id);
+            return StatusCode(200, pensamento);
         }
-        catch (Exception e) { throw; }
+        catch (Exception e) 
+        { 
+            return StatusCode(404, e.Message);
+        }
     }
 
     [HttpPost("")]
@@ -69,35 +75,28 @@ public class PensamentoController : ControllerBase
         {
             Pensamento pensamento = _mapper.Map<Pensamento>(pensamentoDto);
             var respostaInsercao = await _service.AdicionarPensamentoASync(pensamento);
-            return CreatedAtAction(nameof(AdicionarPensamento), new { id = pensamento.Id }, pensamento);
+            return StatusCode(201, "Pensamento foi criado com sucesso!");
         }
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return StatusCode(400, e.Message);
         }
     }
 
     [HttpPut("")]
-    public async Task<IActionResult> AtualizarPensamento([FromQuery] int id, [FromBody] PensamentoDto pensamentoDto)
+    public async Task<IActionResult> EditarPensamento([FromQuery] int id, [FromBody] PensamentoDto pensamentoDto)
     {
         try
         {
             var pensamentoProcurado = await _service.BuscarPensamentoPorIdASync(id);
-            if (pensamentoProcurado != null)
-            {
-                var pensamento = _mapper.Map<Pensamento>(pensamentoProcurado);
-                pensamento.Id = id;
-                var resultadoAtualizacao = await _service.EditarPensamentoASync(pensamento);
-                return Ok(resultadoAtualizacao);
-            }
-            else
-            {
-                return BadRequest("Pensamento não encontrado.");
-            }
+            var pensamento = _mapper.Map<Pensamento>(pensamentoProcurado);
+            pensamento.Id = id;
+            var resultadoAtualizacao = await _service.EditarPensamentoASync(pensamento);
+            return StatusCode(204, "O pensamento foi atualizado com sucesso.");
         }
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return StatusCode(400, e.Message);
         }
     }
 
@@ -109,13 +108,13 @@ public class PensamentoController : ControllerBase
             var resultadoDelecao = await _service.ExcluirPensamentoASync(id);
             if (resultadoDelecao)
             {
-                return StatusCode(200, "Pensamento adicionado com sucesso!");
+                return StatusCode(200, "Pensamento removido com sucesso!");
             }
-            return BadRequest("Não foi possível excluir o pensamento.");
+            return StatusCode(400, "Não foi possível excluir o pensamento.");
         }
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return StatusCode(404, e.Message);
         }
    }
 }

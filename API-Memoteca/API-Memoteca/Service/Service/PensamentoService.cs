@@ -20,7 +20,7 @@ public class PensamentoService : IPensamentoService
             var resposta = await _repository.AdicionarPensamento(pensamento);
             if (resposta == null || resposta == false)
             {
-                throw new Exception("Não foi possível localizar o pensamento.");
+                throw new Exception("Não foi possível adicionar o pensamento.");
             }
             else
             {
@@ -92,7 +92,7 @@ public class PensamentoService : IPensamentoService
             var resposta = await _repository.EditarPensamento(pensamento);
             if(resposta == null || resposta == false)
             {
-                throw new Exception("Não foi possível localizar o pensamento.");
+                throw new Exception("Não foi possível editar o pensamento.");
             }
             else
             {
