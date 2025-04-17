@@ -75,7 +75,7 @@ public class PensamentoController : ControllerBase
         {
             Pensamento pensamento = _mapper.Map<Pensamento>(pensamentoDto);
             var respostaInsercao = await _service.AdicionarPensamentoASync(pensamento);
-            return StatusCode(201, "Pensamento foi criado com sucesso!");
+            return Created("/Pensamentos", new { messagem = "Pensamento foi criado com sucesso!" });
         }
         catch (Exception e)
         {
