@@ -21,7 +21,7 @@ public class PensamentoRepository : IPensamentoRepository
             string sql = "INSERT INTO Pensamento VALUES (@NOMEPENSAMENTO,@AUTOR,@MODELO)";
             var parametros = new
             {
-                NOMEPENSAMENTO = pensamento.Pensamento,
+                NOMEPENSAMENTO = pensamento.PensamentoNome,
                 AUTOR = pensamento.Autor,
                 MODELO = pensamento.Modelo
             };
@@ -90,7 +90,7 @@ public class PensamentoRepository : IPensamentoRepository
             string sql = "UPDATE Pensamento SET Pensamento=@PENSAMENTO,Autor=@AUTOR,Modelo=@MODELO WHERE Id=@ID";
             var parametros = new
             {
-                PENSAMENTO = pensamento.Pensamento,
+                PENSAMENTO = pensamento.PensamentoNome,
                 AUTOR = pensamento.Autor,
                 MODELO = pensamento.Modelo,
                 ID = pensamento.Id
