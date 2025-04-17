@@ -27,7 +27,7 @@
   },
   {
     "ContainingType": "API_Memoteca.Controllers.PensamentoController",
-    "Method": "AtualizarPensamento",
+    "Method": "EditarPensamento",
     "RelativePath": "Pensamentos",
     "HttpMethod": "PUT",
     "IsController": true,
