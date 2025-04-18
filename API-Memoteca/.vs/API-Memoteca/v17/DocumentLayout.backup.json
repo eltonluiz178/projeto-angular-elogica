@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|solutionrelative:api-memoteca\\controllers\\pensamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|c:\\users\\usuario\\desktop\\maracutaia\\est\u00E1gio el\u00F3gica\\angular\\projeto-angular-elogica\\api-memoteca\\api-memoteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|solutionrelative:api-memoteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|c:\\users\\usuario\\desktop\\maracutaia\\est\u00E1gio el\u00F3gica\\angular\\projeto-angular-elogica\\api-memoteca\\api-memoteca\\infra\\repositories\\pensamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|solutionrelative:api-memoteca\\infra\\repositories\\pensamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|c:\\users\\usuario\\desktop\\maracutaia\\est\u00E1gio el\u00F3gica\\angular\\projeto-angular-elogica\\api-memoteca\\api-memoteca\\domain\\pensamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|solutionrelative:api-memoteca\\domain\\pensamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|c:\\users\\usuario\\desktop\\maracutaia\\est\u00E1gio el\u00F3gica\\angular\\projeto-angular-elogica\\api-memoteca\\api-memoteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62BB481D-0D53-415A-9A0E-B50011C88687}|API-Memoteca\\API-Memoteca.csproj|solutionrelative:api-memoteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RetornoPensamentoPaginado.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Domain\\RetornoPensamentoPaginado.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Domain\\RetornoPensamentoPaginado.cs",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PensamentoProfile.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Profiles\\PensamentoProfile.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Profiles\\PensamentoProfile.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PensamentoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Infra\\Repositories\\PensamentoRepository.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Infra\\Repositories\\PensamentoRepository.cs",
@@ -89,14 +89,14 @@
               "RelativeDocumentMoniker": "API-Memoteca\\Controllers\\PensamentoController.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Controllers\\PensamentoController.cs",
               "RelativeToolTip": "API-Memoteca\\Controllers\\PensamentoController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAowFoAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAswGMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T20:52:33.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Pensamento.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Domain\\Pensamento.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Domain\\Pensamento.cs",
@@ -108,19 +108,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Program.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Program.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Program.cs",
               "RelativeToolTip": "API-Memoteca\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:01:27.59Z"
+              "WhenOpened": "2025-04-17T15:01:27.59Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PensamentoService.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Service\\Service\\PensamentoService.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Service\\Service\\PensamentoService.cs",
@@ -133,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PensamentoDto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\Maracutaia\\Est\u00E1gio El\u00F3gica\\Angular\\projeto-angular-elogica\\API-Memoteca\\API-Memoteca\\Dto\\PensamentoDto.cs",
               "RelativeDocumentMoniker": "API-Memoteca\\Dto\\PensamentoDto.cs",

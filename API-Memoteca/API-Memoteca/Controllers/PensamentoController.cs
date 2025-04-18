@@ -83,8 +83,8 @@ public class PensamentoController : ControllerBase
         }
     }
 
-    [HttpPut("")]
-    public async Task<IActionResult> EditarPensamento([FromQuery] int id, [FromBody] PensamentoDto pensamentoDto)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> EditarPensamento(int id, [FromBody] PensamentoDto pensamentoDto)
     {
         try
         {
@@ -93,7 +93,12 @@ public class PensamentoController : ControllerBase
             var resultadoAtualizacao = await _service.EditarPensamentoASync(pensamento);
             if (resultadoAtualizacao)
             { 
-                return Ok("O pensamento foi atualizado com sucesso.");
+                return Ok(new
+                {
+                    success = true,
+                    message = "O pensamento foi atualizado com sucesso.",
+                    data = pensamento
+                });
             }
             return BadRequest("O pensamento não foi atualizado.");
             
@@ -104,8 +109,8 @@ public class PensamentoController : ControllerBase
         }
     }
 
-    [HttpDelete("")]
-    public async Task<IActionResult> ExcluirPensamento([FromQuery] int id)
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> ExcluirPensamento(int id)
     {
         try
         {
