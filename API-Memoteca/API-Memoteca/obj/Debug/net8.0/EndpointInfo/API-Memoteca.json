@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/Pensamentos/{pagina}/{quantidade}": {
+    "/pensamentos/{pagina}/{quantidade}": {
       "get": {
         "tags": [
           "Pensamento"
@@ -37,7 +37,7 @@
         }
       }
     },
-    "/Pensamentos": {
+    "/pensamentos": {
       "get": {
         "tags": [
           "Pensamento"
@@ -137,7 +137,7 @@
         }
       }
     },
-    "/Pensamentos/{id}": {
+    "/pensamentos/{id}": {
       "get": {
         "tags": [
           "Pensamento"

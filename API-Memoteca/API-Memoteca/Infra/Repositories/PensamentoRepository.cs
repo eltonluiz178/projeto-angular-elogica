@@ -41,7 +41,7 @@ public class PensamentoRepository : IPensamentoRepository
             OFFSET @OFFSET ROWS FETCH NEXT @FETCHNEXT ROWS ONLY";
             var parametros = new
             {
-                OFFSET = pagina,
+                OFFSET = (pagina - 1 ) * quantidade,
                 FETCHNEXT = quantidade
             };
             var pensamentos = await _connection.QueryAsync<Pensamento>(sql, parametros);
@@ -87,7 +87,7 @@ public class PensamentoRepository : IPensamentoRepository
     {
         try
         {
-            string sql = "UPDATE Pensamento SET Pensamento=@PENSAMENTO,Autor=@AUTOR,Modelo=@MODELO WHERE Id=@ID";
+            string sql = "UPDATE Pensamento SET PensamentoNome=@PENSAMENTO,Autor=@AUTOR,Modelo=@MODELO WHERE Id=@ID";
             var parametros = new
             {
                 PENSAMENTO = pensamento.PensamentoNome,

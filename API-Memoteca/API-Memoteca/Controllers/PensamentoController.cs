@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API_Memoteca.Controllers;
 
-[Route("Pensamentos")]
+[Route("pensamentos")]
 [ApiController]
 public class PensamentoController : ControllerBase
 {
@@ -31,8 +31,8 @@ public class PensamentoController : ControllerBase
     {
         try
         {
-            var colaboradores = await _service.BuscarPensamentoPaginadoASync(pagina, quantidade);
-            return StatusCode(200, colaboradores);
+            var pensamentos = await _service.BuscarPensamentoPaginadoASync(pagina, quantidade);
+            return StatusCode(200, pensamentos.Pensamentos);
         }
         catch (Exception e)
         {
@@ -88,11 +88,15 @@ public class PensamentoController : ControllerBase
     {
         try
         {
-            var pensamentoProcurado = await _service.BuscarPensamentoPorIdASync(id);
-            var pensamento = _mapper.Map<Pensamento>(pensamentoProcurado);
+            var pensamento = _mapper.Map<Pensamento>(pensamentoDto);
             pensamento.Id = id;
             var resultadoAtualizacao = await _service.EditarPensamentoASync(pensamento);
-            return StatusCode(204, "O pensamento foi atualizado com sucesso.");
+            if (resultadoAtualizacao)
+            { 
+                return Ok("O pensamento foi atualizado com sucesso.");
+            }
+            return BadRequest("O pensamento não foi atualizado.");
+            
         }
         catch (Exception e)
         {
