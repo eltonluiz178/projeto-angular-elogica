@@ -32,7 +32,7 @@ public class PensamentoController : ControllerBase
         try
         {
             var pensamentos = await _service.BuscarPensamentoPaginadoASync(pagina, quantidade);
-            return StatusCode(200, pensamentos.Pensamentos);
+            return StatusCode(200, pensamentos);
         }
         catch (Exception e)
         {
@@ -117,7 +117,11 @@ public class PensamentoController : ControllerBase
             var resultadoDelecao = await _service.ExcluirPensamentoASync(id);
             if (resultadoDelecao)
             {
-                return StatusCode(200, "Pensamento removido com sucesso!");
+                return Ok(new
+                {
+                    success = true,
+                    message = "O pensamento foi atualizado com sucesso."
+                });
             }
             return StatusCode(400, "Não foi possível excluir o pensamento.");
         }

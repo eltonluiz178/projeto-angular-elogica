@@ -27,22 +27,6 @@
   },
   {
     "ContainingType": "API_Memoteca.Controllers.PensamentoController",
-    "Method": "ExcluirPensamento",
-    "RelativePath": "pensamentos",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API_Memoteca.Controllers.PensamentoController",
     "Method": "BuscarPorId",
     "RelativePath": "pensamentos/{id}",
     "HttpMethod": "GET",
@@ -73,6 +57,22 @@
       {
         "Name": "pensamentoDto",
         "Type": "API_Memoteca.Dto.PensamentoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Memoteca.Controllers.PensamentoController",
+    "Method": "ExcluirPensamento",
+    "RelativePath": "pensamentos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

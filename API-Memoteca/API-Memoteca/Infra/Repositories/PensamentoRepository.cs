@@ -49,8 +49,6 @@ public class PensamentoRepository : IPensamentoRepository
             var quantidadeTotalPensamentos = await _connection.QueryFirstOrDefaultAsync<int>(sqlContagem);
             return new RetornoPensamentoPaginado<Pensamento>
             {
-                Pagina = pagina,
-                QtdPagina = quantidade,
                 TotalRegistros = quantidadeTotalPensamentos,
                 Pensamentos = pensamentos.ToList(),
             };
@@ -106,7 +104,7 @@ public class PensamentoRepository : IPensamentoRepository
     {
         try
         {
-            string sql = $"DELETE * FROM Pensamento WHERE Id={id}";
+            string sql = $"DELETE FROM Pensamento WHERE Id={id}";
             var resultadoDelecao = await _connection.ExecuteAsync(sql);
             return resultadoDelecao > 0 ? true : false;
         }
