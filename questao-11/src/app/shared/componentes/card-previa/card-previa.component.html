@@ -1,7 +1,27 @@
-<div class="card" [class]=" modelo == 1 ? 'card1' : modelo == 2 ? 'card2' : 'card3'" style="width: 15rem;">
-  <div class="card-body">
-    <h5 class="card-title">Previa</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore facilis accusantium harum ratione perfer</p>
+@if (telaMural == false)
+{
+  <div class="card" [class]=" modelo == 1 ? 'card1' : modelo == 2 ? 'card2' : 'card3'" style="width: 15rem;">
+    <div class="card-body">
+        <h4 class="card-title">Previa</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore facilis accusantium
+          harum ratione perfer</p>
+        <h5>Autora da Silva Sauro</h5>
+    </div>
   </div>
-</div>
-
+}
+@else
+{
+  <div class="card" [class]=" modelo == 1 ? 'card1' : modelo == 2 ? 'card2' : 'card3'" style="width: 17rem;">
+    <div class="card-body">
+      <h1 class="w-auto" [class]=" modelo == 1 ? 'aspas1' : modelo == 2 ? 'aspas2' : 'aspas3'" style="width: 15rem;"><i class="bi bi-quote"></i></h1>
+      <p>{{ pensamentoNome }}</p>
+      <div class="d-flex justify-content-between">
+        <h5>{{ autor }}</h5>
+        <div class="">
+          <button class="border-0 bg-transparent" (click)="editarPensamento()"><i class="bi bi-pencil-square mx-2"></i></button>
+          <button class="border-0 bg-transparent" (click)="exibirAlerta()"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+}

@@ -1,11 +1,37 @@
 .card1 {
-  box-shadow: 10px 10px 10px rgba(21, 69, 128, 1);
+  box-shadow: 10px 10px 10px rgb(21, 69, 128);
 }
 .card2 {
-  box-shadow: 10px 10px 10px rgba(107, 209, 255, 1);
+  box-shadow: 10px 10px 10px rgb(107, 209, 255);
 }
 .card3 {
-  box-shadow: 10px 10px 10px rgba(25, 135, 84, 1);
+  box-shadow: 10px 10px 10px rgb(25, 135, 84);
+}
+
+.aspas1 {
+  color: rgb(21, 69, 128);
+}
+
+.aspas2 {
+  color: rgb(107, 209, 255);
+}
+
+.aspas3 {
+  color: rgb(25, 135, 84);
+}
+
+h1{
+  font-size: 6rem;
+}
+
+p {
+  font-size: 16px;
+  color: #6C757D;
+}
+
+h5{
+  font-size: 16px;
+  color: #154580;
 }
 
 
