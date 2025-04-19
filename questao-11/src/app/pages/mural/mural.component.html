@@ -1,0 +1,61 @@
+<app-cabecalho></app-cabecalho>
+<section>
+  <div class="w-100 text-center">
+    <h3 class="py-5">Meu Mural</h3>
+    <button type="submit" [routerLink]="['/formulario']" routerLinkActive="router-link-active"  class="btn rouded w-25 mb-5" style="background-color: #154580; color: white;">Adicionar Pensamento</button>
+  </div>
+  <div class="mx-auto pb-5 row w-75">
+    @for (pensamento of pensamentos; track $index) {
+      <app-card-previa class="col-12 col-md-6 col-lg-4 mb-5"
+      [pensamentoNome]="pensamento.pensamentoNome"
+      [autor]="pensamento.autor"
+      [modelo]="pensamento.modelo"
+      [id]="pensamento.id"
+      (editar)="editarPensamento($event)"
+      (excluir)="excluirPensamento($event)">
+       ></app-card-previa>
+    }
+  </div>
+  <div class="paginacao-container">
+  <div class="paginacao">
+    <button
+      class="paginacao-botao"
+      [disabled]="paginaAtual === 1"
+      (click)="mudarPagina(1)">
+      &laquo;
+    </button>
+
+    <button
+      class="paginacao-botao"
+      [disabled]="paginaAtual === 1"
+      (click)="mudarPagina(paginaAtual - 1)">
+      &lsaquo;
+    </button>
+
+@for (pagina of paginas; track $index)
+{
+    <button
+      class="paginacao-botao"
+      [class.ativo]="pagina === paginaAtual"
+      (click)="mudarPagina(pagina)">
+      {{ pagina }}
+    </button>
+  }
+
+    <button
+      class="paginacao-botao"
+      [disabled]="paginaAtual === totalPaginas"
+      (click)="mudarPagina(paginaAtual + 1)">
+      &rsaquo;
+    </button>
+
+    <button
+      class="paginacao-botao"
+      [disabled]="paginaAtual === totalPaginas"
+      (click)="mudarPagina(totalPaginas)">
+      &raquo;
+    </button>
+  </div>
+</div>
+</section>
+<app-rodape></app-rodape>
