@@ -4,45 +4,48 @@
     <h4>Adicione um pensamento novo:</h4>
   </div>
   <div class="d-flex justify-content-center w-75 rounded-3 mb-5" style="background-color: #C4EDFF;">
-    <form class="w-75 my-5">
+    <form [formGroup]="formulario" (ngSubmit)="salvarPensamento()" class="w-75 my-5">
       <div class="mb-3">
-        <label for="Pensamento" class="form-label">Pensamento</label>
-        <input type="text" class="form-control" id="Pensamento" placeholder="Digite seu pensamento." style="height: 100px;">
+        <label for="pensamento" class="form-label">Pensamento</label>
+        <input type="text" class="form-control" id="pensamento" placeholder="Digite seu pensamento." style="height: 100px;" formControlName="pensamentoNome">
+        <app-validador-formulario [control]="obterControle('pensamentoNome')"></app-validador-formulario>
       </div>
       <div class="mb-3">
         <label for="autor" class="form-label">Autor(a) ou Fonte</label>
-        <input type="text" class="form-control" id="autor" placeholder="Insira o nome do(a) autor(a) ou fonte." style="height: 60px;">
+        <input type="text" class="form-control" id="autor" placeholder="Insira o nome do(a) autor(a) ou fonte." style="height: 60px;" formControlName="autor">
+        <app-validador-formulario [control]="obterControle('autor')"></app-validador-formulario>
       </div>
 
       <div>
         <label for="modelo" class="form-label my-3">Selecione o modelo do card:</label>
-        <div class="d-flex justify-content-between gap-3">
+        <div class="d-flex justify-content-between gap-3 mb-3">
           <div>
             <div class="mb-5">
-              <input type="radio" class="form-check-input" id="modelo1">
+              <input type="radio" class="form-check-input" id="modelo1" formControlName="modelo" value="1">
               <span class="form-check-label mx-2" for="modelo1">Modelo 1</span>
             </div>
             <app-card-previa [telaMural]="false" [modelo]="1" ></app-card-previa>
           </div>
           <div>
             <div class="mb-5">
-              <input type="radio" class="form-check-input" id="modelo2">
+              <input type="radio" class="form-check-input" id="modelo2" formControlName="modelo" value="2">
               <span class="form-check-label mx-2" for="modelo2">Modelo 2</span>
             </div>
             <app-card-previa [telaMural]="false" [modelo]="2"></app-card-previa>
           </div>
           <div>
             <div class="mb-5">
-              <input type="radio" class="form-check-input" id="modelo3">
+              <input type="radio" class="form-check-input" id="modelo3" formControlName="modelo" value="3">
               <span class="form-check-label mx-2" for="modelo3">Modelo 3</span>
             </div>
             <app-card-previa [telaMural]="false" [modelo]="3"></app-card-previa>
           </div>
         </div>
+        <app-validador-formulario [control]="obterControle('modelo')"></app-validador-formulario>
       </div>
       <div class="d-flex justify-content-center gap-5 mt-5">
-        <button type="submit" class="btn rouded w-25" style="background-color: #154580; color: white;">Salvar</button>
-        <button type="submit" class="btn rounded w-25" style="background-color: #154580; color: white;">Cancelar</button>
+        <button type="submit" (click)="formulario.markAllAsTouched()" class="btn rouded w-25" style="background-color: #154580; color: white;">Salvar</button>
+        <button type="submit" class="btn rounded w-25" [routerLink]="['/mural']" routerLinkActive="router-link-active"  style="background-color: #154580; color: white;">Cancelar</button>
       </div>
     </form>
   </div>
